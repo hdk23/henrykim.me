@@ -1,13 +1,319 @@
 <!DOCTYPE html>
+<!-- Inspired by notion.so -->
 <html>
-    <head>
-        <title>
-            henrykim.me
-        </title>
-    </head>
-    <body>
-        <h1 style="color:#00693e">Hello! Welcome to Henry's Webpage</h1>>
-        <p>This page currently has nothing, but I'll be sure to update it as soon as I can!</p>
+<head>
+    <title>My Landing Page</title>
+    <!-- allow non-English characters -->
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="test.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
+    
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+    <!-- Checkbox Hack Source: https://alvarotrigo.com/blog/hamburger-menu-css/ -->
+    <!-- Source 2: https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ -->
+    <!-- https://stackoverflow.com/questions/60709340/hamburger-menu-css-only-not-clickable -->
+    <nav class="navbar fixed desktop">
+        <div id="logo"><strong>Henry Kim</strong></div>
+        <div class="menu-wrap">
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class="menu flex-container">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#experiences">Experience</a></li>
+                    <li><a href="#da">Digital Art</a></li>
+                    <li><a href="#contact-form">Contact Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
 
-    </body>
+    <nav class="navbar mobile">
+        
+        <div class="menu-wrap">
+            <ul class="nav-links">
+                <div id="logo2"><strong>Henry Kim</strong></div>
+                <input type="checkbox" id="checkbox_toggle" class="toggler"/>
+                <label for="checkbox_toggle" class="hamburger">☰</label>
+                <!-- NAVIGATION MENUS -->
+                <div class="menu flex-container">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#experiences">Experience</a></li>
+                    <li><a href="#da">Digital Art</a></li>
+                    <li><a href="#contact-form">Contact Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- hr source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_hr_test -->
+    <div class="main" id="about">
+        <div class="greeting section flex-container">
+            <div class="left-col flex-container">
+                <div class="hello">
+                    <h1>안녕하세요, 헨리입니다.<br>Hi, I'm Henry.</h1>
+                    <h3>Junior at <span class="dartmouth">Dartmouth College</span>.<br>Software Engineer from Seoul.<br>Digital Artist.</h3>
+                    <a href="#contact-form"><button class="contact-btn">Contact Me</button></a>
+                </div>
+
+                <div id="skills">
+                    <p>Trust me with</p>
+                    <img src="images/skills/python.png" alt="">
+                    <img src="images/skills/java.png" alt="">
+                    <img src="images/skills/c.png" alt="">
+                    <img src="images/skills/htmlcss.png" alt="">
+                    <img src="images/skills/git.png" alt="">
+                    <img src="images/skills/maya.png" alt="">
+                    <img src="images/skills/premiere.png" alt="">
+                    <img src="images/skills/photoshop.png" alt="">
+                </div>
+            </div>
+            <div class="right-col">
+                <img src="images/other/me.jpeg" id="mepic" alt="">
+            </div>
+        </div>
+        <hr>
+
+        <!-- Modified section to better serve portfolio site -->
+        <div class="code section" id="code">
+            <h2>Code that solves real-world problems. <br> Code that makes our lives easier.</h2>
+            <p>Here are some of my class and personal projects.</p>
+        </div>
+
+
+        <!-- CSS Carousel Source: https://css-tricks.com/how-to-make-a-css-only-carousel/ -->
+        <div class="code-samples section flex-container">
+            <div class="code-sample">
+                <img src="images/code/cs10ps3.png" alt="">
+                <h3>Huffman Encoder</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/cs10ps4.png" alt="">
+                <h3>Kevin Bacon Game</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/cs10ps5.png" alt="">
+                <h3>Part of Speech Tagger</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/cs10ps6.gif" alt="">
+                <h3>Collaborative GUI Editor</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/crawler.gif" alt="">
+                <h3>Search Engine Crawler</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/indexer.png" alt="">
+                <h3>Search Engine Indexer</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/querier.gif" alt="">
+                <h3>Search Engine Querier</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/cs74hw3.png" alt="">
+                <h3>Data Analysis with Scikit-Learn</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/cs74hw4.png" alt="">
+                <h3>K-Means Clustering</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/cs72hw1.png" alt="">
+                <h3>Spanish Eliza</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/autograder.gif" alt="">
+                <h3>CS 10 Autograders</h3>
+            </div>
+            <div class="code-sample">
+                <img src="images/code/dartmun.png" alt="">
+                <h3>DartMUN Conference Tool</h3>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section" id="experiences">
+            <h2>From Series A Start-Up to Big Tech. <br> Thriving in any environment.</h2>
+            <p>Here's where I've worked and where I currently work.</p>
+        </div>
+        <div id="experiences" class="section flex-container">
+            <div class="experience">
+                <div class="expimg">
+                    <img src="images/experience/amazon_logo1.png">
+                </div>
+                <div class="expdesc">
+                    <p>Incoming SDE Intern: specific roles TBA!</p>
+                </div>
+                <div class="expfooter flex-container">
+                    <div class="expsmlogo">
+                        <img src="images/experience/amazon_logo2.png">
+                    </div>
+                    <div class="exptitle">
+                        <strong>Software Development Engineer Intern</strong><br>
+                        <em>Jun-Sep 2022, Arlington, VA</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="expimg">
+                    <img src="images/experience/codeit_logo1.png">
+                </div>
+                <div class="expdesc">
+                    <p>Codeit is an educational startup dedicated to teaching users of a wide range of skill levels programming
+                        through short, distilled videos and interactive projects. Find my published content at <a href="https://codeit.com">codeit.com</a>.</p>
+                </div>
+                <div class="expfooter flex-container">
+                    <div class="expsmlogo">
+                        <img src="images/experience/codeit_logo2.png">
+                    </div>
+                    <div class="exptitle">
+                        <strong>Global Content Producer</strong><br>
+                        <em>Oct 2020-Apr 2021, Seoul, Korea</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience flex-container">
+                <div class="expimg">
+                    <img src="images/experience/dartmouth_logo1.png">
+                </div>
+                <div class="expdesc">
+                    <p>Graded assignments and exams and provided constructive feedback for students in four computer science courses
+                        (Intro Python, Java OOP, Software Design & Implementation, Machine Learning) and developed tools to automate testing in CS 10.</p>
+                </div>
+                <div class="expfooter flex-container">
+                    <div class="expsmlogo">
+                        <img src="images/experience/dartmouth_logo2.png">
+                    </div>
+                    <div class="exptitle">
+                        <strong>TA for CS 1, CS 10, CS 50, & CS 74</strong><br>
+                        <em>Oct 2020-Present, Hanover, NH</em>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="da section" id="da">
+            <h2>Not your traditional artist. <br>Exploring tech in all forms.</h2>
+            <p>See my select works from my 3D Digital Modeling and Computer Animation courses.</p>
+        </div>
+        <div class="da-samples section">
+            <div class="da-sample flex-container">
+                <div class="left-col">
+                    <img src="images/skills/maya.png" alt="">
+                    <h3>3D Modeling: Interior Design</h3>
+                    <p>Here's a snapshot of my first ever project in Maya: modeling my bedroom back at home.</p>
+                </div>
+                <div class="right-col">
+                    <img src="images/digitalart/bedroom.jpg">
+                </div>
+            </div>
+
+            <div class="da-sample flex-container">
+                <div class="left-col">
+                    <img src="images/skills/maya.png" alt="">
+                    <h3>3D Modeling: Abstract Art</h3>
+                    <p>Inspired by fall foliage. Made of <em>literally</em> a million cubes.</p>
+                </div>
+                <div class="right-col">
+                    <img src="images/digitalart/abstract.jpg">
+                </div>
+            </div>
+
+            <div class="da-sample flex-container">
+                <div class="left-col">
+                    <img src="images/skills/maya.png" alt="">
+                    <h3>Computer Animation: Lip Sync</h3>
+                    <p>Lip sync of a line from <em>Squid Game</em>: 
+                        "If you can satisfy me in five minutes, I might let you live."</p>
+                </div>
+                <div class="right-col">
+                    <img src="images/digitalart/lipsync.gif">
+                </div>
+            </div>
+
+            <div class="da-sample flex-container">
+                <div class="left-col">
+                    <img src="images/skills/maya.png" alt="">
+                    <h3>Computer Animation: Final Project</h3>
+                    <p>A short film about a boy in despair after losing his box at a cliff</p>
+                </div>
+                <div class="right-col">
+                    <img src="images/digitalart/final.gif">
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- Form for textbox requirement -->
+    <!-- Source: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+    <div class="contact-form section flex-container" id="contact-form">
+        <h1>Contact Me</h1>
+        <form action="/" autocomplete="off">
+            <label for="username">Your Name:</label><br>
+            <input type="text" id="username"><br>
+            <label for="email">Your Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <input type="text" id="message" name="message"><br>
+            <div class="flex-container">
+                <button type="submit" id="submit">Submit</button>
+                </div>
+            <!-- Name, Email, Message, Submit Button -->
+        </form>
+    </div>
+    <hr>
+    
+    <nav class="navbar2 desktop">
+        <div class="menu-wrap">
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class="menu2 flex-container">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#experiences">Experience</a></li>
+                    <li><a href="#da">Digital Art</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <nav class="navbar2 mobile">
+        <div class="menu-wrap">
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class="menu2 flex-container">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#experiences">Experience</a></li>
+                    <li><a href="#da">Digital Art</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+
+    <footer class="flex-container">
+        <div class="copyright"> 
+            © 2022 Henry Kim
+        </div>
+        <div class="sns flex-container">
+            <a href="mailto:henry.kim.23@dartmouth.edu"><img src="images/footer/gmail.png"></a>
+            <a href="https://www.linkedin.com/in/henrykim-dart23/"><img src="images/footer/linkedin.png"></a>
+            <a href="https://github.com/hdk23/"><img src="images/footer/github.png"></a>
+            <a href="https://www.instagram.com/henry.kim.23/"><img src="images/footer/insta.png"></a>
+        </div>
+    </footer>
+</body>
 </html>
