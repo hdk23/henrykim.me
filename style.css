@@ -1,0 +1,416 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f0f0f0;
+    text-align: justify;
+    width: 98%;
+}
+
+button {
+    border: none;
+    padding: 1em 2em;
+    color: white;
+    background-color: #e16259;
+    border-radius: 0.5em;
+}
+
+.dartmouth {
+    color: #00693e;
+}
+
+button:hover {
+    transform:scale(1.2);
+}
+
+/* Source: https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+button:active {
+    background-color: #c75850;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6px;
+
+}
+
+.mobile-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 1em;
+    margin-right: 2em;
+}
+
+/* Source for fixing navbar: https://www.w3schools.com/howto/howto_css_fixed_menu.asp */
+.fixed {
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height:60px;
+    
+}
+
+.main {
+    margin-top: 30px;
+    padding: 6px;
+    width: auto;
+}
+
+/* Source for navbar styling: https://www.w3schools.com/css/css_navbar.asp */
+ul {
+    list-style-type: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    /* background-color: #333; */
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.menu li a:hover {
+    background-color: #e16259;
+    color: white;
+    border-radius: 8px 8px 2px 2px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.desktop .menu2 {
+    flex-flow: row;
+    justify-content: space-around;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.mobile .menu2, .mobile .menu {
+    flex-flow: column;
+}
+
+.menu2 .flex-container, .menu {
+    display: block;
+    flex-direction: column;
+}
+
+.mobile .menu li, .menu2 li {
+    width: 100%;
+}
+
+.about-menu, .code-menu, .exp-menu, .da-menu {
+    flex-direction: column;
+    display:block;
+}
+
+#logo, #logo2 {
+    font-size: 24px;
+    margin-left: 1em;
+    padding-left: 7px;
+}
+
+input[type=checkbox]{
+    display: none;
+} 
+
+/* Styling Textbox: https://stackoverflow.com/questions/20765310/best-way-to-style-a-textbox-in-css */
+input[type=text] {
+    margin-bottom: 1em;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .15);
+    background-color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 320px;
+  }
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    margin-right: 2em;
+}
+   
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    h2 {
+        text-align: left;
+    }
+
+    .fixed {
+        height: auto;
+    }
+
+   .menu { 
+        display: none;
+        right: 0;
+        left: 0;
+        text-align: center;
+        flex-flow: column;
+        margin-top: 3em;
+   }
+
+   /* <!-- Checkbox Hack Source: https://alvarotrigo.com/blog/hamburger-menu-css/ --> */
+   input[type=checkbox]:checked ~ .menu {
+        display: block;
+   }
+
+   #logo2 {
+        position: absolute;
+        top: 2%;
+   }
+
+   .hamburger {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: -5%;
+        padding: 0.5em;
+        top: 0%;
+    }
+   
+   .menu-wrap .toggler{
+       position: absolute;
+       z-index: 0;
+       cursor: pointer;
+       width: 50px;
+       height: 50px;
+       opacity: 0;
+    }
+
+   .expsmlogo {
+       display: none;
+   }
+}
+
+.section {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+#skills img {
+    height: 3em;
+    margin: 0.5em;
+    transition: transform .2s;
+}
+
+/* Source for zoom: https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+#skills img:hover, footer img:hover{
+    transform: scale(1.5);
+}
+
+.greeting .left-col, .greeting .right-col {
+    flex-grow: 1;
+}
+
+.greeting .left-col {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.greeting .left-col {
+    flex-basis: 600px;
+    
+}
+
+.greeting .right-col {
+    flex-basis: 600px;
+    margin-left: 1em;
+}
+
+.greeting .right-col img {
+    width:100%;
+    padding: 1em;
+    border-radius: 24px;
+}
+
+.code-sample {
+    flex-basis: 360px;
+    justify-content:space-around;
+    text-align: center;
+}
+
+.experience:hover, .code-sample:hover, .da-sample:hover, nav li:hover {
+    background-color: #bfbfbf;
+    transition: 0.3s ease;
+}
+
+.expdesc {
+    height: 180px;
+    padding-top: 0.5em;
+}
+
+.expdesc {
+    height: 144px;
+}
+
+.code-sample:hover, .experience:hover, #mepic:hover {
+    transform: scale(1.05);
+}
+
+.da-sample:hover {
+    transform: scale(1.02);
+}
+
+.code-sample > img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.code-sample, .da-sample, .experience {
+    border-radius: 12px;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.da-sample > .left-col {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    align-self: center;
+    padding: 2em;
+}
+
+.da-sample > .left-col > img {
+    width:4em;
+}
+
+.da-sample > .right-col {
+    flex-basis: 800px;
+    flex-grow: 1;
+}
+
+.da-sample > .right-col > img {
+    width:100%;
+    border-radius: 10px;
+}
+
+
+/* Experience Stuff */
+/* Making Equal Columns: Source 
+https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/ */
+.experience {
+    flex-basis: 360px;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+
+.expimg > img {
+    height:2em;
+    width: auto;
+}
+
+.expfooter {
+    /* overwrite justification settings above */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.expsmlogo > img {
+    height: 3em;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.expsmlogo {
+    flex-basis: 36px;
+}
+
+.exptitle {
+    align-self: center;
+    padding-bottom: 4px;
+}
+
+.contact-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.mobile {
+    display: none;
+}
+
+nav li {
+    border-radius: 8px;
+}
+
+nav.desktop li {
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 894px) {
+    .expdesc {
+        height: auto;
+    }
+    
+    .expdesc {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile {
+        display:block;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .desktop {
+        display: none;
+    }
+    
+}
+
+footer.flex-container {
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Footer Stuff */
+.copyright {
+    align-self: center;
+}
+
+.sns img {
+    height:2em;
+    margin:0.5em;
+}
